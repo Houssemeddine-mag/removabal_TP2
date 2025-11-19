@@ -3,6 +3,7 @@ package tpspring.spring.controller;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import tpspring.spring.model.Student;
 import tpspring.spring.repository.StudentRepository;
@@ -13,6 +14,9 @@ import java.util.List;
 
 // Indicates this is a Spring Boot test that loads the full application context
 @SpringBootTest
+
+// Use H2 test profile
+@ActiveProfiles("test")
 
 // Specifies the order in which test methods will be executed
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
