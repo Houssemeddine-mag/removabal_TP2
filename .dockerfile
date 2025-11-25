@@ -32,4 +32,4 @@ COPY --from=build /app/spring/target/*.jar app.jar
 EXPOSE 8081
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"] 
