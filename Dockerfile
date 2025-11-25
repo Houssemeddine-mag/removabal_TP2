@@ -28,8 +28,8 @@ WORKDIR /app
 # Copy the built JAR from build stage
 COPY --from=build /app/spring/target/*.jar app.jar
 
-# Expose port (Render will set PORT environment variable)
+# Expose port
 EXPOSE 8081
 
 # Run the application
-ENTRYPOINT ["java", "-jar", "app.jar"] 
+ENTRYPOINT ["java", "-jar", "app.jar"]
