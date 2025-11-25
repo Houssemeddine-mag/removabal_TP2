@@ -11,6 +11,7 @@ COPY spring/pom.xml spring/pom.xml
 
 # Download dependencies
 WORKDIR /app/spring
+RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline -B
 
 # Copy source code
